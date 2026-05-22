@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ===== HEADER BACKGROUND ===== */
+        .header {
+            background: url("{% static 'bg.jpg' %}") no-repeat center;
+            background-size: cover;
+            padding: 25px;
+            color: #00ffff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* ===== MENU BAR ===== */
+        .menu {
+            background-color: #8B0000;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .menu a {
+            display: inline-block;
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        /* ===== PAGE CONTENT ===== */
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER TITLE ================= -->
+<div class="header">
+    Quantum-Assisted Machine Learning Framework for Distributed Denial-
+of-Service Attack Detection
+</div>
+
+<!-- ================= MENU BAR ================= -->
+<div class="menu">
+
+    <a href="{% url 'predict_ddos_attack_type' %}">
+        PREDICT DDOS ATTACK TYPE
+    </a>
+
+    <!-- 🔹 QUANTUM BUTTON (NEW) -->
+    <a href="/quantum/">
+        QUANTUM DDOS DETECTION
+    </a>
+
+    <a href="{% url 'ViewYourProfile' %}">
+        VIEW YOUR PROFILE
+    </a>
+
+    <a href="{% url 'logout' %}">
+        LOGOUT
+    </a>
+
+</div>
+
+<!-- ================= PAGE CONTENT ================= -->
+<div class="content">
+    {% block userblock %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #000000;
+    }
+    .container-fluid {
+        padding: 50px;
+    }
+    .container {
+        background-color: white;
+        padding: 50px;
+    }
+    #title {
+        font-family: 'Fredoka One', cursive;
+    }
+    .text-uppercase {
+        font-family: 'Righteous', cursive;
+    }
+    .style2 {
+        color: #FFFF00;
+    }
+</style>
+
+<body>
+<div class="container-fluid">
+    <div class="container">
+
+        <!-- ================= USER PROFILE DETAILS ================= -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <table width="879" border="0" align="center">
+                    <tr>
+                        <td width="148" height="34" bgcolor="#FF0000">
+                            <span class="style2"><strong>Username</strong></span>
+                        </td>
+                        <td width="225">{{ object.username }}</td>
+
+                        <td width="157" bgcolor="#FF0000">
+                            <span class="style2"><strong>Email Id</strong></span>
+                        </td>
+                        <td width="321">{{ object.email }}</td>
+                    </tr>
+
+                    <tr>
+                        <td height="38" bgcolor="#FF0000">
+                            <span class="style2"><strong>Mobile Number</strong></span>
+                        </td>
+                        <td>{{ object.phoneno }}</td>
+
+                        <td bgcolor="#FF0000">
+                            <span class="style2"><strong>Gender</strong></span>
+                        </td>
+                        <td>{{ object.gender }}</td>
+                    </tr>
+
+                    <tr>
+                        <td height="34" bgcolor="#FF0000">
+                            <span class="style2"><strong>Address</strong></span>
+                        </td>
+                        <td>{{ object.address }}</td>
+
+                        <td bgcolor="#FF0000">
+                            <span class="style2"><strong>Country</strong></span>
+                        </td>
+                        <td>{{ object.country }}</td>
+                    </tr>
+
+                    <tr>
+                        <td height="32" bgcolor="#FF0000">
+                            <span class="style2"><strong>State</strong></span>
+                        </td>
+                        <td>{{ object.state }}</td>
+
+                        <td bgcolor="#FF0000">
+                            <span class="style2"><strong>City</strong></span>
+                        </td>
+                        <td>{{ object.city }}</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- ================= QUANTUM BUTTON (INSIDE USER LOGIN) ================= -->
+        <br><br>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="/quantum/" style="text-decoration:none;">
+                    <button type="button"
+                            style="
+                            background-color:#4CAF50;
+                            color:white;
+                            padding:12px 30px;
+                            border:none;
+                            border-radius:6px;
+                            font-size:16px;
+                            cursor:pointer;">
+                        Quantum DDoS Detection
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- ===================================================================== -->
+
+    </div>
+</div>
+</body>
+
+{% endblock %}

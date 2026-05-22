@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum Result</title>
+    <style>
+        body {
+            background: url("{% static 'bg.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial;
+        }
+        .box {
+            background: white;
+            width: 500px;
+            margin: 120px auto;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <h2>{{ result }}</h2>
+    <br>
+    <a href="/quantum/">Try Again</a>
+</div>
+</body>
+</html>
